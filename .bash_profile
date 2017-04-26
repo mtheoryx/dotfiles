@@ -9,3 +9,7 @@ source ~/dotfiles/.nvm-utils
 
 # BB-specific
 source ~/dotfiles/.learn-backend-utils
+
+mybash() {
+	(cd dotfiles; atom .)
+}
