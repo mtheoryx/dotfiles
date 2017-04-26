@@ -1,0 +1,44 @@
+#! /bin/bash
+
+# Postgres Stuff
+startPostgres () {
+  echo 'Starting postgres...'
+  brew services start postgres
+  echo 'Done.'
+}
+
+restartPostgres() {
+  echo 'Restarting postgres...'
+  brew services restart postgres
+  echo 'Done.'
+}
+
+stopPostgres () {
+  echo 'Stopping postgres...'
+  brew services stop postgres
+  echo 'Done.'
+}
+
+# Learn GDL stuff
+startLearn () {
+  echo 'Starting learn server...'
+  (cd $HOME/bb/learn; gdl startLearn)
+  echo 'Done.'
+}
+
+stopLearn() {
+  echo 'Stopping learn server...'
+  (cd $HOME/bb/learn; gdl stopLearn; gdl --stop)
+  echo 'Done.'
+}
+
+# Bundle Utilities
+startBackend () {
+  startPostgres
+  startLearn
+}
+
+stopBackend () {
+  stopPostgres
+  stopLearn
+}
