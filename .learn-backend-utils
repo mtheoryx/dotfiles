@@ -42,3 +42,28 @@ stopBackend () {
   stopPostgres
   stopLearn
 }
+
+# BB Git Stuff
+updateRouter() {
+  echo 'Updating ultra-router...'
+  (cd $HOME/bb/ultra-router; git pull; gs)
+  echo 'Done.'
+}
+
+updateLearn() {
+  echo 'Updating learn...'
+  (cd $HOME/bb/learn; git pull; gs)
+  echo 'Done.'
+}
+
+updateLearnUtil() {
+  echo 'Updating learn.util...'
+  (cd $HOME/bb/learn.util; git pull; gs)
+  echo 'Done.'
+}
+
+updateBackend() {
+  updateRouter
+  updateLearnUtil
+  updateLearn
+}
