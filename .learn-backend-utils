@@ -28,7 +28,7 @@ startLearn () {
 
 stopLearn() {
   echo 'Stopping learn server...'
-  (cd $HOME/bb/learn; gdl stopLearn; gdl --stop)
+  (cd $HOME/bb/learn; gdl stopLearn)
   echo 'Done.'
 }
 
@@ -42,8 +42,6 @@ startRouter() {
 startBackend () {
   startPostgres
   startLearn
-  # Does not run as background daemon
-  startRouter
 }
 
 stopBackend () {
@@ -83,7 +81,20 @@ updateUI() {
 }
 
 updateBackend() {
+  echo 'Updating ultra-router, learn.util, and learn...'
   updateRouter
   updateLearnUtil
   updateLearn
+  echo 'Done.'
+}
+
+nukeLearn() {
+  echo 'Nuking Learn...'
+  (cd $HOME/bb/learn;\
+  stopLearn;\
+  gdl clean;\
+  gdl --stop;\
+  find . -name .gradle | xargs rm -rf;\
+  gdl installLearn;)
+  echo 'Done.'
 }
