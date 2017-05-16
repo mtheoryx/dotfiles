@@ -14,3 +14,6 @@ source ~/dotfiles/.learn-backend-utils
 mybash() {
 	(cd ~/dotfiles; atom .)
 }
+godots() {
+  cd ~/dotfiles
+}
