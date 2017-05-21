@@ -2,6 +2,7 @@
 
 # GIT Stuff
 alias gs='git status'
+alias gb='git branch'
 
 # get current branch in git repo
 function parse_git_branch() {
