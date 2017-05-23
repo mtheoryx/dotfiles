@@ -12,6 +12,9 @@ source ~/dotfiles/file-system-aliases.sh
 source ~/dotfiles/navigation-utils.sh
 source ~/dotfiles/brew-utils.sh
 
+# Docker
+source ~/dotfiles/docker-utils.sh
+
 # BB-specific
 source ~/dotfiles/learn-backend-utils.sh
 
