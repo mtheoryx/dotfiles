@@ -51,7 +51,7 @@ function parse_git_dirty {
 	fi
 }
 
-export PS1="\n\[\e[32m\]\\$\[\e[m\]\[\e[32m\]\u\[\e[m\] : \[\e[32m\]\w\[\e[m\] : \[\e[34m\]\`parse_git_branch\`\[\e[m\] \n$> "
+export PS1="\n\[\e[32m\]\\$\[\e[m\]\[\e[32m\]\u\[\e[m\] : \[\e[32m\]\w\[\e[m\] : \[\e[34m\]\`parse_git_branch\`\[\e[m\] \n$ > "
 
 gdevlog() {
 	git log HEAD..origin/develop

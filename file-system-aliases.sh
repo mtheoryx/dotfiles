@@ -1,4 +1,4 @@
-#! /bin/bash
+#!/bin/bash
 
 alias l='ls -la';
 
@@ -8,4 +8,9 @@ alias treeitall='tree';
 
 treeit () {
   tree -L $1
+}
+
+
+reloada() {
+	source ~/dotfiles/bashrc.sh
 }

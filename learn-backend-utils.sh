@@ -3,19 +3,19 @@
 # Postgres Stuff
 startPostgres () {
   echo 'Starting postgres...'
-  brew services start postgres
+  (cd $HOME/bb/learn-postgres-docker; dc up -d)
   echo 'Done.'
 }
 
-restartPostgres() {
-  echo 'Restarting postgres...'
-  brew services restart postgres
-  echo 'Done.'
-}
+# restartPostgres() {
+#   echo 'Restarting postgres...'
+#   brew services restart postgres
+#   echo 'Done.'
+# }
 
 stopPostgres () {
   echo 'Stopping postgres...'
-  brew services stop postgres
+  (cd $HOME/bb/learn-postgres-docker; dc down)
   echo 'Done.'
 }
 

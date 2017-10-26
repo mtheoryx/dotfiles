@@ -1,4 +1,4 @@
-#! /bin/bash
+#!/bin/bash
 
 # $HOME sourcing
 source ~/.git-completion.bash
@@ -15,6 +15,11 @@ source ~/dotfiles/brew-utils.sh
 # Docker
 source ~/dotfiles/docker-utils.sh
 
+# Kubernetes
+source ~/dotfiles/kubernetes-utils.sh
+
+# React
+source ~/dotfiles/react-utils.sh
+
 # BB-specific
 source ~/dotfiles/learn-backend-utils.sh
-
