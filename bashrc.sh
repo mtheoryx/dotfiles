@@ -18,6 +18,9 @@ source ~/dotfiles/docker-utils.sh
 # Kubernetes
 source ~/dotfiles/kubernetes-utils.sh
 
+# Terraform
+source ~/dotfiles/terraform-utils.sh
+
 # React
 source ~/dotfiles/react-utils.sh
 

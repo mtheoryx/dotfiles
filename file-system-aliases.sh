@@ -10,7 +10,6 @@ treeit () {
   tree -L $1
 }
 
-
 reloada() {
 	source ~/dotfiles/bashrc.sh
 }
