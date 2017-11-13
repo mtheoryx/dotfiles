@@ -6,6 +6,9 @@ alias ktl='kubectl'
 # Blackboard kubernetes
 bbktl () {
     case "$1" in
+    "reset")
+        unset KUBECONFIG
+        ;;
     "fozzie")
         (
             cd $HOME/bb/starter/kubernetes
