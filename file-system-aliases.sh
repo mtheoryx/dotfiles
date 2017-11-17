@@ -2,9 +2,9 @@
 
 alias l='ls -la';
 
-alias treeitone='tree -L 1';
+alias tree1='tree -L 1';
 
-alias treeitall='tree';
+alias treeall='tree';
 
 treeit () {
   tree -L $1
