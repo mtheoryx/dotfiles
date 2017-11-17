@@ -1,7 +1,7 @@
 #! /bin/bash
 
 mybash() {
-  (cd ~/dotfiles; atom .)
+  (cd ~/dotfiles; code .)
 }
 
 alias godots='cd ~/dotfiles && l'
