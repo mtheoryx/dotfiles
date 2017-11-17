@@ -10,3 +10,6 @@ export DOTOKEN=ab92fe768c55d01a1fa0d8aa46a080b1061db2d1b914322872a76c4eac02162a
 export WUDUPQA=wudupqa1
 # Add VIsual Studio Code (code)
 export PATH=$PATH:/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin
+
+# Git pretty
+export PS1="\n\[\e[32m\]\\$\[\e[m\]\[\e[32m\]\u\[\e[m\] : \[\e[32m\]\w\[\e[m\] : \[\e[34m\]\`parse_git_branch\`\[\e[m\] \n$ > "
