@@ -13,3 +13,7 @@ treeit () {
 reloada() {
 	source ~/dotfiles/bashrc.sh
 }
+
+mkdirgo() {
+  mkdir $1 && cd $_ && pwd
+}

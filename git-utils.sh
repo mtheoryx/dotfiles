@@ -4,6 +4,8 @@
 alias gs='git status'
 alias gb='git branch'
 
+alias githome='git config user.name "David R Poindexter III" && git config user.email "drpoindexter@gmail.com"'
+
 # get current branch in git repo
 function parse_git_branch() {
 	BRANCH=`git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'`
