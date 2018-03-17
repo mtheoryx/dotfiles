@@ -7,7 +7,7 @@ source ~/dotfiles/git-completion.bash
 #source ~/dotfiles/environment.sh
 #source ~/dotfiles/exports.sh
 source ~/dotfiles/git-utils.sh
-#source ~/dotfiles/nvm-utils.sh
+source ~/dotfiles/nvm-utils.sh
 source ~/dotfiles/file-system-aliases.sh
 source ~/dotfiles/navigation-utils.sh
 source ~/dotfiles/brew-utils.sh
