@@ -1,6 +1,10 @@
 #! /bin/bash
 
 # GIT Stuff
+
+# Git pretty
+export PS1="\n\[\e[32m\]\\$\[\e[m\]\[\e[32m\]\u\[\e[m\] : \[\e[32m\]\w\[\e[m\] : \[\e[34m\]\`parse_git_branch\`\[\e[m\] \n$ > "
+
 alias gs='git status'
 alias gb='git branch'
 
