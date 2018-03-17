@@ -1,19 +1,19 @@
 #!/bin/bash
 
 alias l='ls -la';
+alias la='ls -la';
 
 alias tree1='tree -L 1';
-
 alias treeall='tree';
 
-treeit () {
+function treeit () {
   tree -L $1
 }
 
-reloada() {
-	source ~/dotfiles/bashrc.sh
+function reloada () {
+	source ~/.bash_profile
 }
 
-mkdirgo() {
+function mkdirgo () {
   mkdir $1 && cd $_ && pwd
 }
