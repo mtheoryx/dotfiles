@@ -1,5 +1,9 @@
 #! /bin/bash
 
+# github cli
+
+alias git=hub
+
 # GIT Stuff
 
 # Git pretty
