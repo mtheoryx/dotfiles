@@ -9,8 +9,11 @@ alias git=hub
 # Git pretty
 export PS1="\n\[\e[32m\]\\$\[\e[m\]\[\e[32m\]\u\[\e[m\] : \[\e[32m\]\w\[\e[m\] : \[\e[34m\]\`parse_git_branch\`\[\e[m\] \n$ > "
 
+# Git Shortcuts
 alias gs='git status'
 alias gb='git branch'
+alias gca='git add . && git commit'
+alias gitl='git log --decorate --oneline --graph --all'
 
 alias githome='git config user.name "David R Poindexter III" && git config user.email "drpoindexter@gmail.com"'
 
