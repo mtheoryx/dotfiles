@@ -6,8 +6,17 @@ alias git=hub
 
 # GIT Stuff
 
+# GIT Branch Management
+alias gba='git branch -a' # List all branches, local and remote
+alias gbr='git branch -r' # List all remote branches
+alias gbv='git branch -vv' # List all local branches, verbosely
+
+# Delete local branches not matching remote branches that have been deleted
+alias gbp="git branch -vv | grep 'origin/.*: gone]' | awk '{print $1}' | xargs git branch -D"
+
 # Git pretty
-export PS1="\n\[\e[32m\]\\$\[\e[m\]\[\e[32m\]\u\[\e[m\] : \[\e[32m\]\w\[\e[m\] : \[\e[34m\]\`parse_git_branch\`\[\e[m\] \n$ > "
+# export PS1="\[\e[32m\]\\$\[\e[m\]\[\e[32m\]\u\[\e[m\] : \[\e[32m\]\w\[\e[m\] : \[\e[34m\]\`parse_git_branch\`\[\e[m\] \n$ > "
+export PS1="\[\e[32m\]\w\[\e[m\] : \[\e[34m\]\`parse_git_branch\`\[\e[m\] \n$ > "
 
 # Git Shortcuts
 alias gs='git status'
