@@ -17,7 +17,7 @@ alias gbp="git branch -vv | grep 'origin/.*: gone]' | awk '{print $1}' | xargs g
 # Git pretty
 # export PS1="\[\e[32m\]\\$\[\e[m\]\[\e[32m\]\u\[\e[m\] : \[\e[32m\]\w\[\e[m\] : \[\e[34m\]\`parse_git_branch\`\[\e[m\] \n$ > "
 # export PS1="\[\e[32m\]\w\[\e[m\] : \[\e[34m\]\`parse_git_branch\`\[\e[m\] \n$ > "
-export PS1="|| \W > \[\e[34m\]\`parse_git_branch\`\[\e[m\] \n$ > "
+export PS1="\e[0;32m\w > \[\e[34m\]\`parse_git_branch\`\[\e[m\] \n$ > "
 
 # Git Shortcuts
 alias gs='git status'
