@@ -1,3 +1,3 @@
 #!/bin/bash
 
-export PATH=$HOME/Library/Python/3.7/bin:$PATH
+#export PATH=$HOME/Library/Python/3.7/bin:$PATH
