@@ -12,16 +12,3 @@ alias dct='docker container'
 alias de='docker exec -it'
 
 export DOCKER_ID_USER="mtheoryx"
-
-# Portainer start and stop utilities
-
-## Start up portainer
-function portUp () {
-  (cd ~/code/platform/portainer; )
-}
-
-## Shut down portainer, completely
-function portDown () {
-  (cd ~/code/platform/portainer; )
-}
-
