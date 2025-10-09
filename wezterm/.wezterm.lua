@@ -67,9 +67,9 @@ local tabBarConfig = {
 bar.apply_to_config(config, tabBarConfig)
 
 config.font_size = 19
--- config.color_scheme = "Catpuccin Macchiato"
+config.color_scheme = "Catpuccin Macchiato"
 
-config.color_scheme = "Catpuccin Mocha"
+-- config.color_scheme = "Catpuccin Mocha"
 
 config.enable_tab_bar = true
 

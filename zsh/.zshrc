@@ -15,6 +15,8 @@ export EZA_CONFIG_DIR="${HOME}/.config/eza"
 alias git='hub'
 alias tf='terraform'
 
+alias todo='yatto'
+
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 
@@ -45,7 +47,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 source $ZSH/themes/alien/alien.zsh
-export ALIEN_THEME="gruvbox"
+export ALIEN_THEME="bnw"
 export ALIEN_SECTIONS_LEFT=(
     exit
     time
