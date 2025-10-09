@@ -195,7 +195,7 @@ alias rl='source ~/.zshrc'
 
 
 # tmux config
-# tmux source-file ~/dotfiles/tmux.conf
+tmux source-file ~/tmux.conf
 
 # The following lines have been added by Docker Desktop to enable Docker CLI completions.
 fpath=(/Users/drpoindexter/.docker/completions $fpath)
