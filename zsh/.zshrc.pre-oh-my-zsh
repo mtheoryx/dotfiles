@@ -1,0 +1,19 @@
+# NVM
+export NVM_DIR=~/.nvm
+source $(brew --prefix nvm)/nvm.sh
+
+# Brew
+export PATH="/usr/local/sbin:$PATH"
+
+# Python
+
+if command -v pyenv 1>/dev/null 2>&1; then
+    eval "$(pyenv init -)"
+fi
+
+export PATH=$(pyenv root)/shims:$PATH
+
+# Aliases
+alias cat="bat"
+
+eval $(thefuck --alias)
