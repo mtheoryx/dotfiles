@@ -3,7 +3,7 @@
 # Q pre block. Keep at the top of this file.
 eval $(thefuck --alias)
 
-EDITOR=vim
+EDITOR=nvim
 
 alias lse='eza --icons=always'
 alias lsea='eza -a --icons=always'
