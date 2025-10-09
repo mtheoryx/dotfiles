@@ -1,0 +1,6 @@
+pane	1	0	:zsh	1	:*	1	:/Users/drpoindexter	1	zsh	:/bin/zsh --login
+pane	home	0	:zsh	1	:*	1	:/Users/drpoindexter/dotfiles	1	zsh	:/bin/zsh --login
+pane	home	0	:zsh	1	:*	2	:/Users/drpoindexter	0	zsh	:/bin/zsh --login
+window	1	0	1	:*	b55f,230x52,0,0,2
+window	home	0	1	:*	5b34,230x51,0,0{115x51,0,0,0,114x51,116,0,1}
+state	1	
