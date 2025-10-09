@@ -1,0 +1,14 @@
+{
+	"telemetry": {
+		"enabled": true,
+		"machineId": "d21009d0-5af3-11e9-b60e-7f77eb83398a"
+	},
+	"cli": {
+		"packageManager": "yarn"
+	},
+	"feedback": {
+		"firstCheckDate": 1604352756281,
+		"sevenDayFeedbackDate": 1606060178938,
+		"lastRequestDate": 1645818973761
+	}
+}
