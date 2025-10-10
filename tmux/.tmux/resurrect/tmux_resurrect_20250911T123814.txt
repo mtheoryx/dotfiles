@@ -1,5 +1,0 @@
-pane	lua	0	:zsh	1	:*	0	:/Users/drpoindexter/code/training/lua	1	zsh	:/bin/zsh --login
-pane	lua	1	:zsh	0	:-	0	:/Users/drpoindexter/code/training/lua	1	zsh	:/bin/zsh --login
-window	lua	0	1	:*	b55d,230x52,0,0,0
-window	lua	1	0	:-	b55e,230x52,0,0,1
-state	lua	
