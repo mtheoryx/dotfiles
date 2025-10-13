@@ -5,9 +5,9 @@ eval $(thefuck --alias)
 
 EDITOR=nvim
 
-alias lse='eza --icons=always'
-alias lsea='eza -a --icons=always'
-alias lseal='eza -la --icons=always'
+# alias lse='eza --icons=always'
+# alias lsea='eza -a --icons=always'
+# alias lseal='eza -la --icons=always'
 
 export EZA_CONFIG_DIR="${HOME}/.config/eza"
 
@@ -43,6 +43,12 @@ export PATH=$PATH:$GOBIN
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
+
+unalias 'ls'
+
+alias ls='eza --icons=always'
+alias lsa='eza -a --icons=always'
+alias lsal='eza -la --icons=always'
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -135,7 +141,7 @@ plugins=(
     zsh-autosuggestions
 )
 
-source $ZSH/oh-my-zsh.sh
+# source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
