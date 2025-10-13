@@ -5,13 +5,9 @@ eval $(thefuck --alias)
 
 EDITOR=nvim
 
-# alias lse='eza --icons=always'
-# alias lsea='eza -a --icons=always'
-# alias lseal='eza -la --icons=always'
-
 export EZA_CONFIG_DIR="${HOME}/.config/eza"
 
-# alias cat='bat'
+alias cat='bat'
 alias git='hub'
 alias tf='terraform'
 
@@ -230,3 +226,8 @@ alias rest="timer 15m && terminal-notifier -message 'Pomodoro'\
 
 ### Zoxide
 eval "$(zoxide init --cmd cd zsh)"
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/Users/drpoindexter/.lmstudio/bin"
+# End of LM Studio CLI section
+
