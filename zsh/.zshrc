@@ -40,7 +40,7 @@ export PATH=$PATH:$GOBIN
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
-unalias 'ls'
+# unalias 'ls'
 
 alias ls='eza --icons=always'
 alias lsa='eza -a --icons=always'
@@ -231,3 +231,6 @@ eval "$(zoxide init --cmd cd zsh)"
 export PATH="$PATH:/Users/drpoindexter/.lmstudio/bin"
 # End of LM Studio CLI section
 
+
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /Users/drpoindexter/.config/tfenv/versions/1.13.3/terraform terraform
