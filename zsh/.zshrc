@@ -227,6 +227,10 @@ alias rest="timer 15m && terminal-notifier -message 'Pomodoro'\
 ### Zoxide
 eval "$(zoxide init --cmd cd zsh)"
 
+### Weather Alias for Indianapolis
+
+alias weather="rustormy -c Indianapolis --colors -u imperial"
+
 # Added by LM Studio CLI (lms)
 export PATH="$PATH:/Users/drpoindexter/.lmstudio/bin"
 # End of LM Studio CLI section
