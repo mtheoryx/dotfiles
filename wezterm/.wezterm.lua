@@ -16,7 +16,7 @@ local tabBarConfig = {
 		right = 1,
 	},
 	separator = {
-		space = 1,
+		space = .5,
 		left_icon = wez.nerdfonts.fa_long_arrow_right,
 		right_icon = wez.nerdfonts.fa_long_arrow_left,
 		field_icon = wez.nerdfonts.indent_line,
@@ -69,10 +69,7 @@ bar.apply_to_config(config, tabBarConfig)
 config.font_size = 19
 config.color_scheme = "Catpuccin Macchiato"
 
--- config.color_scheme = "Catpuccin Mocha"
-
 config.enable_tab_bar = true
-
 config.window_decorations = "RESIZE"
 
 config.window_background_opacity = 1

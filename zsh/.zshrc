@@ -41,7 +41,7 @@ export PATH=$PATH:$GOBIN
 export ZSH="$HOME/.oh-my-zsh"
 
 # unalias 'ls'
-
+# EZA Confit
 alias ls='eza --icons=always'
 alias lsa='eza -a --icons=always'
 alias lsal='eza -la --icons=always'
@@ -225,11 +225,9 @@ alias rest="timer 15m && terminal-notifier -message 'Pomodoro'\
             -sound Crystal"
 
 ### Zoxide
-eval "$(zoxide init --cmd cd zsh)"
+eval "$(zoxide init zsh)"
 
-### Weather Alias for Indianapolis
-
-alias weather="rustormy -c Indianapolis --colors -u imperial"
+alias cd="z"
 
 # Added by LM Studio CLI (lms)
 export PATH="$PATH:/Users/drpoindexter/.lmstudio/bin"
@@ -238,3 +236,13 @@ export PATH="$PATH:/Users/drpoindexter/.lmstudio/bin"
 
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /Users/drpoindexter/.config/tfenv/versions/1.13.3/terraform terraform
+source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+## History Setup
+HISTFILE=$HOME/.zhistory
+SAVEHIST=1000
+HISTSIZE=999
+setopt share_history
+setopt hist_expire_dups_first
+setopt hist_verify
+
