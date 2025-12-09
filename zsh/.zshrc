@@ -246,3 +246,4 @@ setopt share_history
 setopt hist_expire_dups_first
 setopt hist_verify
 
+alias ..='cd ~'
