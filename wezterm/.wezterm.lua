@@ -16,7 +16,7 @@ local tabBarConfig = {
 		right = 1,
 	},
 	separator = {
-		space = .5,
+		space = 0.5,
 		left_icon = wez.nerdfonts.fa_long_arrow_right,
 		right_icon = wez.nerdfonts.fa_long_arrow_left,
 		field_icon = wez.nerdfonts.indent_line,
@@ -52,7 +52,7 @@ local tabBarConfig = {
 			color = 8,
 		},
 		clock = {
-			enabled = true,
+			enabled = false,
 			icon = wez.nerdfonts.md_calendar_clock,
 			color = 5,
 		},
