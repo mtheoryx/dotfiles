@@ -247,3 +247,4 @@ setopt hist_expire_dups_first
 setopt hist_verify
 
 alias ..='cd ~'
+alias weather='rustormy -c Indianapolis --colors'
