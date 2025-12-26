@@ -1,0 +1,11 @@
+#!/bin/zsh
+
+borderoptions=(
+	style=round
+	width=9.0
+	hidpi=on
+	active_color=0xffca74d4
+	inactive_color=0xff414550
+)
+
+borders "${borderoptions[@]}"
