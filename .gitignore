@@ -1,3 +1,4 @@
 .config/eza/theme.yml
 tmux/.tmux/resurrect
 .DS_Store
+hammerspoon/.hammerspoon
