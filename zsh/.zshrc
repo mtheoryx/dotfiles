@@ -3,7 +3,7 @@
 # Q pre block. Keep at the top of this file.
 eval $(thefuck --alias)
 
-EDITOR=nvim
+export EDITOR=nvim
 
 export EZA_CONFIG_DIR="${HOME}/.config/eza"
 
