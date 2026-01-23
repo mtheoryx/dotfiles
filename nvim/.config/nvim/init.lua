@@ -783,32 +783,32 @@ require('lazy').setup({
     event = 'VimEnter',
     version = '1.*',
     dependencies = {
-      -- -- Snippet Engine
-      -- {
-      --   'L3MON4D3/LuaSnip',
-      --   version = '2.*',
-      --   build = (function()
-      --     -- Build Step is needed for regex support in snippets.
-      --     -- This step is not supported in many windows environments.
-      --     -- Remove the below condition to re-enable on windows.
-      --     if vim.fn.has 'win32' == 1 or vim.fn.executable 'make' == 0 then
-      --       return
-      --     end
-      --     return 'make install_jsregexp'
-      --   end)(),
-      --   dependencies = {
-      --     -- `friendly-snippets` contains a variety of premade snippets.
-      --     --    See the README about individual language/framework/plugin snippets:
-      --     --    https://github.com/rafamadriz/friendly-snippets
-      --     -- {
-      --     --   'rafamadriz/friendly-snippets',
-      --     --   config = function()
-      --     --     require('luasnip.loaders.from_vscode').lazy_load()
-      --     --   end,
-      --     -- },
-      --   },
-      --   opts = {},
-      -- },
+      -- Snippet Engine
+      {
+        'L3MON4D3/LuaSnip',
+        version = '2.*',
+        build = (function()
+          -- Build Step is needed for regex support in snippets.
+          -- This step is not supported in many windows environments.
+          -- Remove the below condition to re-enable on windows.
+          if vim.fn.has 'win32' == 1 or vim.fn.executable 'make' == 0 then
+            return
+          end
+          return 'make install_jsregexp'
+        end)(),
+        dependencies = {
+          -- `friendly-snippets` contains a variety of premade snippets.
+          --    See the README about individual language/framework/plugin snippets:
+          --    https://github.com/rafamadriz/friendly-snippets
+          -- {
+          --   'rafamadriz/friendly-snippets',
+          --   config = function()
+          --     require('luasnip.loaders.from_vscode').lazy_load()
+          --   end,
+          -- },
+        },
+        opts = {},
+      },
       'folke/lazydev.nvim',
     },
     --- @module 'blink.cmp'
@@ -955,7 +955,7 @@ require('lazy').setup({
         -- Some languages depend on vim's regex highlighting system (such as Ruby) for indent rules.
         --  If you are experiencing weird indenting issues, add the language to
         --  the list of additional_vim_regex_highlighting and disabled languages for indent.
-        additional_vim_regex_highlighting = { 'ruby' },
+        additional_vim_regex_highlighting = { 'ruby', 'markdown' },
       },
       indent = { enable = true, disable = { 'ruby' } },
     },
@@ -1016,4 +1016,4 @@ require('lazy').setup({
 })
 
 -- The line beneath this is called `modeline`. See `:help modeline`
--- vim: ts=2 sts=2 sw=2 et
+-- viM: ts=2 sts=2 sw=2 et
