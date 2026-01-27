@@ -40,8 +40,7 @@ export PATH=$PATH:$GOBIN
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
-# unalias 'ls'
-# EZA Confit
+# EZA Config
 alias ls='eza --icons=always'
 alias lsa='eza -a --icons=always'
 alias lsal='eza -la --icons=always'
@@ -136,8 +135,6 @@ plugins=(
     zsh-syntax-highlighting
     zsh-autosuggestions
 )
-
-# source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
@@ -248,3 +245,10 @@ setopt hist_verify
 
 alias ..="cd .."
 alias weather='rustormy -c Indianapolis --colors'
+
+# chpwd() commands
+
+# List directory contents on directory change (cd)
+chpwd() {
+	lsa
+}
