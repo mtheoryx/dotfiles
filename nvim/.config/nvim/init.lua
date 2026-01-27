@@ -132,6 +132,10 @@ vim.o.smartcase = true
 -- Keep signcolumn on by default
 vim.o.signcolumn = 'yes'
 
+-- Configure tabs
+vim.o.shiftwidth = 4
+vim.o.tabstop = 4
+
 -- Decrease update time
 vim.o.updatetime = 250
 
@@ -769,6 +773,7 @@ require('lazy').setup({
       end,
       formatters_by_ft = {
         lua = { 'stylua' },
+        markdown = { 'prettierd', 'prettier' },
         -- Conform can also run multiple formatters sequentially
         -- python = { "isort", "black" },
         --
@@ -899,7 +904,15 @@ require('lazy').setup({
   --   end,
   -- },
 
-  { 'catppuccin/nvim', name = 'catppuccin', priority = 1000, opts = { flavor = 'macchiato' } },
+  -- { 'catppuccin/nvim', name = 'catppuccin', priority = 1000, opts = { flavor = 'macchiato' } },
+  {
+    'catppuccin/nvim',
+    priority = 1000,
+    config = function()
+      require('catppuccin').setup {}
+      vim.cmd.colorscheme 'catppuccin'
+    end,
+  },
 
   -- Highlight todo, notes, etc in comments
   { 'folke/todo-comments.nvim', event = 'VimEnter', dependencies = { 'nvim-lua/plenary.nvim' }, opts = { signs = false } },
@@ -982,6 +995,7 @@ require('lazy').setup({
   require 'kickstart.plugins.autopairs',
   require 'kickstart.plugins.neo-tree',
   require 'kickstart.plugins.gitsigns', -- adds gitsigns recommend keymaps
+
   -- Test that I'm commiting
   -- NOTE: The import below can automatically add your own plugins, configuration, etc from `lua/custom/plugins/*.lua`
   --    This is the easiest way to modularize your config.
