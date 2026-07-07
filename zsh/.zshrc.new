@@ -1,0 +1,52 @@
+# .zshrc — Loader
+# Sources modular config files based on OS and machine profile.
+# Edit the individual files, not this loader.
+#
+# Architecture:
+#   core.zsh        — cross-platform essentials (always loaded)
+#   os-macos.zsh    — macOS-specific (Homebrew, apps, etc.)
+#   os-linux.zsh    — Linux-specific
+#   plugins.zsh     — Oh-My-Zsh + Alien theme (desktop machines)
+#   plugins-lite.zsh — minimal prompt (servers, Pi, EC2)
+#   ~/.zshrc.secrets — secrets (gitignored, machine-local)
+#   ~/.zshrc.local   — machine-specific overrides (gitignored)
+
+# ─── Detect environment ───────────────────────────────────
+export DOTFILES_DIR="${HOME}/dotfiles/zsh"
+export DOTFILES_OS="$(uname -s)"  # Darwin or Linux
+
+# Machine profile: set in ~/.zshrc.local or defaults to "desktop"
+# Options: desktop, server
+: "${DOTFILES_PROFILE:=desktop}"
+
+# ─── Core (always) ───────────────────────────────────────
+source "${DOTFILES_DIR}/core.zsh"
+
+# ─── OS-specific ──────────────────────────────────────────
+case "$DOTFILES_OS" in
+    Darwin)
+        source "${DOTFILES_DIR}/os-macos.zsh"
+        ;;
+    Linux)
+        source "${DOTFILES_DIR}/os-linux.zsh"
+        ;;
+esac
+
+# ─── Plugins / Prompt ─────────────────────────────────────
+case "$DOTFILES_PROFILE" in
+    server)
+        source "${DOTFILES_DIR}/plugins-lite.zsh"
+        ;;
+    *)
+        source "${DOTFILES_DIR}/plugins.zsh"
+        ;;
+esac
+
+# ─── Secrets ──────────────────────────────────────────────
+[[ -f ~/.zshrc.secrets ]] && source ~/.zshrc.secrets
+
+# ─── Machine-local overrides ─────────────────────────────
+[[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
+
+# ─── Shell integrations (must be last) ───────────────────
+[[ "$TERM_PROGRAM" == "kiro" ]] && . "$(kiro --locate-shell-integration-path zsh)"

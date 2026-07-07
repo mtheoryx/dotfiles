@@ -1,0 +1,5 @@
+# .zshenv — Runs for ALL zsh instances (login, interactive, scripts).
+# Keep this extremely minimal. Only truly universal env vars belong here.
+
+# ─── Cargo/Rust (needed for non-interactive shells too) ───
+[[ -f "$HOME/.cargo/env" ]] && . "$HOME/.cargo/env"

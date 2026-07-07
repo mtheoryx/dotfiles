@@ -1,0 +1,19 @@
+# .zprofile — Login shell setup
+# Runs once per login session (before .zshrc).
+# Keep this minimal — heavy lifting belongs in .zshrc modules.
+
+# ─── pyenv path init (must be in .zprofile for login shells) ──
+if command -v pyenv &>/dev/null; then
+    eval "$(pyenv init --path)"
+fi
+
+# ─── Homebrew (needs to be early for PATH) ────────────────
+if [[ "$(uname -s)" == "Darwin" ]]; then
+    if [[ -f /opt/homebrew/bin/brew ]]; then
+        eval "$(/opt/homebrew/bin/brew shellenv)"
+    elif [[ -f /usr/local/bin/brew ]]; then
+        eval "$(/usr/local/bin/brew shellenv)"
+    fi
+elif [[ -d /home/linuxbrew/.linuxbrew ]]; then
+    eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+fi
