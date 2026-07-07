@@ -3,3 +3,7 @@ tmux/.tmux/resurrect
 .DS_Store
 hammerspoon/.hammerspoon
 hammerspoon/.hammerspoon
+
+# Machine-local and secrets (never commit)
+zsh/.zshrc.secrets
+zsh/.zshrc.local

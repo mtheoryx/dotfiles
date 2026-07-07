@@ -1,11 +1,15 @@
-## Amazon Q pre block. Keep at the top of this file.
-[[ -f "${HOME}/Library/Application Support/amazon-q/shell/zshrc.pre.zsh" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/zshrc.pre.zsh"
-# Q pre block. Keep at the top of this file.
+
+
+
+
+## Q pre block. Keep at the top of this file.
 eval $(thefuck --alias)
 
 export EDITOR=nvim
 
 export EZA_CONFIG_DIR="${HOME}/.config/eza"
+
+alias kiro-cli="/Applications/Kiro\ CLI.app/contents/MacOS/kiro-cli"
 
 alias cat='bat'
 alias git='hub'
@@ -64,6 +68,7 @@ export ALIEN_SECTIONS_RIGHT=(
     vcs_branch:async
     vcs_status:async
     vcs_dirty:async
+	battery
 )
 export ALIEN_SECTION_PATH_COMPONENTS=2
 export ALIEN_VERSIONS_PROMPT='PYTHON_S NODE_S'
@@ -184,9 +189,6 @@ function y() {
 	rm -f -- "$tmp"
 }
 
-# Amazon Q post block. Keep at the bottom of this file.
-[[ -f "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh"
-
 # forgit plugin config
 # Zsh:
 # ~/.zshrc:
@@ -246,9 +248,17 @@ setopt hist_verify
 alias ..="cd .."
 alias weather='rustormy -c Indianapolis --colors'
 
-# chpwd() commands
+
+# Secrets (gitignored — machine-local)
+[[ -f ~/.zshrc.secrets ]] && source ~/.zshrc.secrets
 
 # List directory contents on directory change (cd)
 chpwd() {
 	lsa
 }
+
+
+
+[[ "$TERM_PROGRAM" == "kiro" ]] && . "$(kiro --locate-shell-integration-path zsh)"
+
+
