@@ -10,6 +10,8 @@ plugins=(
     zsh-autosuggestions
 )
 
+source "$ZSH/oh-my-zsh.sh"
+
 # ─── Alien Theme ──────────────────────────────────────────
 if [[ -f "$ZSH/themes/alien/alien.zsh" ]]; then
     source "$ZSH/themes/alien/alien.zsh"

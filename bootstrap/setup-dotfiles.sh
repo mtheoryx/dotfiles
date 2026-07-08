@@ -23,9 +23,9 @@ for f in ~/.zshrc ~/.zprofile ~/.zshenv; do
 done
 
 echo "→ Stowing packages..."
-stow zsh
-stow tmux
-stow nvim
+stow -R zsh
+stow -R tmux
+stow -R nvim
 
 echo "→ Setting profile to: $PROFILE"
 echo "export DOTFILES_PROFILE=$PROFILE" > ~/.zshrc.local
