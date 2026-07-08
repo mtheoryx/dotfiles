@@ -56,9 +56,12 @@ if command -v lazygit &>/dev/null; then
     alias lg='lazygit'
 fi
 
-# ─── bat ──────────────────────────────────────────────────
+# ─── bat (Ubuntu packages it as 'batcat') ─────────────────
 if command -v bat &>/dev/null; then
     alias cat='bat'
+elif command -v batcat &>/dev/null; then
+    alias cat='batcat'
+    alias bat='batcat'
 fi
 
 # ─── thefuck ─────────────────────────────────────────────

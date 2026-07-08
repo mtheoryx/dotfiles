@@ -36,6 +36,7 @@ sudo apt install -y \
     tmux \
     neovim \
     bat \
+    eza \
     fzf \
     ripgrep \
     fd-find \
@@ -45,7 +46,6 @@ sudo apt install -y \
 if [[ "$PROFILE" == "desktop" ]]; then
     echo "→ Installing desktop packages..."
     sudo apt install -y \
-        eza \
         yazi
 fi
 

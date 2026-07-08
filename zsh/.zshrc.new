@@ -15,6 +15,9 @@
 export DOTFILES_DIR="${HOME}/dotfiles/zsh"
 export DOTFILES_OS="$(uname -s)"  # Darwin or Linux
 
+# ─── Machine-local overrides (early — sets DOTFILES_PROFILE) ──
+[[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
+
 # Machine profile: set in ~/.zshrc.local or defaults to "desktop"
 # Options: desktop, server
 : "${DOTFILES_PROFILE:=desktop}"
@@ -44,9 +47,6 @@ esac
 
 # ─── Secrets ──────────────────────────────────────────────
 [[ -f ~/.zshrc.secrets ]] && source ~/.zshrc.secrets
-
-# ─── Machine-local overrides ─────────────────────────────
-[[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
 
 # ─── Shell integrations (must be last) ───────────────────
 [[ "$TERM_PROGRAM" == "kiro" ]] && . "$(kiro --locate-shell-integration-path zsh)"
